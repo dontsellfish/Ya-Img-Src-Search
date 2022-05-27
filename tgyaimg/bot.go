@@ -21,13 +21,8 @@ func Start(pref tele.Settings, imgbbToken string, whitelist ...string) {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	_, err = os.Stat(DataDirPath)
-	if err == os.ErrNotExist {
-		err = os.Mkdir(DataDirPath, 0644)
-		if err != nil && err != os.ErrExist {
-			log.Fatalln(err)
-		}
-	} else if err != nil {
+	err = os.MkdirAll(DataDirPath, os.ModePerm)
+	if err != nil {
 		log.Fatalln(err)
 	}
 
