@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-const ConfigPath = "cfg.txt"
+const ConfigPath = "cfg.json"
 
 type Cfg struct {
 	Whitelist  []string `json:"whitelist"`
