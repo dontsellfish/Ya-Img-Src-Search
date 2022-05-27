@@ -27,6 +27,7 @@ Don't forget to fill ```cfg.json``` before running.
 ```shell
 git clone https://github.com/dontsellfish/Ya-Img-Src-Search
 python3 -m pip install bs4
+cd Ya-Img-Src-Search
 go build
 ./main
 ```
