@@ -22,7 +22,7 @@ func Start(pref tele.Settings, imgbbToken string, whitelist ...string) {
 		log.Fatalln(err)
 	}
 	_, err = os.Stat(DataDirPath)
-	if err != os.ErrNotExist {
+	if err == os.ErrNotExist {
 		err = os.Mkdir(DataDirPath, 0644)
 		if err != nil && err != os.ErrExist {
 			log.Fatalln(err)
