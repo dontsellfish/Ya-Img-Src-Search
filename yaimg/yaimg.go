@@ -29,7 +29,6 @@ func YandexGetSources(url string) (sources []PicInfo, originalImg PicInfo, err e
 		return
 	}
 
-	print(string(outputStr))
 	var resp yaImgResponse
 	err = json.Unmarshal(outputStr, &resp)
 	if err != nil {

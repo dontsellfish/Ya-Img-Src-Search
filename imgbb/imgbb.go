@@ -36,8 +36,6 @@ func Post(apiKey string, imgPath string, opts ...interface{}) (displayUrl string
 		return
 	}
 
-	println(string(buffer))
-
 	var imgbbResp imgbbApiResponse
 	err = json.Unmarshal(buffer, &imgbbResp)
 	if err != nil {

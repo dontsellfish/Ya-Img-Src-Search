@@ -21,6 +21,13 @@ func Start(pref tele.Settings, imgbbToken string, whitelist ...string) {
 	if err != nil {
 		log.Fatalln(err)
 	}
+	_, err = os.Stat(DataDirPath)
+	if err != os.ErrNotExist {
+		err = os.Mkdir(DataDirPath, 0644)
+	}
+	if err != nil {
+		log.Fatalln(err)
+	}
 
 	bot, err := tele.NewBot(pref)
 	if err != nil {
