@@ -34,6 +34,6 @@ go build
 
 ### And that's it. 
 Any code review is appreciated, because I'm junior at Golang dev. 
-And, yeah, rewrite yaimg.py in Go would be lovely.
+And, yeah, rewritting yaimg.py in Go would be lovely.
 
 (btw, Ya**** don't ban me pls, I love you)
